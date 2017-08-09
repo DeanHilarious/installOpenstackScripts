@@ -10,6 +10,8 @@ TOP_DIR='/etc/chrony'
 apt-get install chrony
 cd /etc/chrony/
 echo "server controller iburst">>chrony.conf
+echo  "allow 192.168.98.0/24">>chrony.conf
+service chrony restart
 #function install_chrony
 #{
     #if[$? -eq 0]
